@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+--LightCyan: hsl(193, 38%, 86%);
+--NeonGreen: hsl(150, 100%, 66%);
+--GrayishBlue: hsl(217, 19%, 38%);
+--DarkGrayishBlue: hsl(217, 19%, 24%);
+--DarkBlue: hsl(218, 23%, 16%);
+}
+
+body{
+    background-color: var(--DarkBlue);
+    font-family: 'Manrope', sans-serif;
+}
+
+main {
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    height: auto;
+    padding: 40px 40px 0 40px;
+    margin: auto;
+    border-radius: 12px;
+    background-color: var(--DarkGrayishBlue);
+}
+
+#advice-number {
+    font-size: 10.5px;
+    text-align: center;
+    color: var(--NeonGreen);
+    text-transform: uppercase;
+    letter-spacing: 4.3pt;
+}
+
+#advice {
+    font-size: 28px;
+    text-align: center;
+    color: var(--LightCyan);
+}
+
+#button {
+    position: relative;
+    top: 30px;
+    background-color: var(--NeonGreen);
+    border: none;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+#button:hover {
+    box-shadow: 0 0 20px 3px var(--NeonGreen);
+    cursor: pointer;
+}
+
+.rotate {
+    animation: rotate 1.4s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(1080deg);
+    }
+}
+
+@media (max-width: 550px) {
+    #container {
+        width: auto;
+        margin: auto 10px;
+        padding: 40px 20px 0 20px;
+    }
+
+    #advise {
+        font-size: 24px;
+    }
+
+    #divider {
+        content: url(./images/pattern-divider-mobile.svg);
+    }
+}
